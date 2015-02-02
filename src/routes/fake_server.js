@@ -1,10 +1,14 @@
 module.exports = {
   history: function (req, res, next) {
-    res.send('history');
+  	var jid = req.params.jid;
+
+    res.send('history for journal #' + jid);
   },
 
   stories: function (req, res, next) {
-    res.send('stories!');
+  	var id = req.params.id;
+
+    res.send('story ' + id);
   }
 }
 
