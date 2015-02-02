@@ -5,4 +5,7 @@ var app = express();
 
 routes(app);
 
-app.listen('3000');
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log("The Spyyn API is now running at localhost:" + port);
+});
