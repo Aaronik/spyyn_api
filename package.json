@@ -1,0 +1,27 @@
+{
+  "name": "spyyn_api",
+  "version": "0.0.0",
+  "description": "Spyyn's backend",
+  "main": "app.js",
+  "engines": {
+    "node": "0.10.32",
+    "npm": "2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aaronik/spyyn_api.git"
+  },
+  "keywords": [
+    "spyyn",
+    "news"
+  ],
+  "author": "Aaron Sullivan",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/Aaronik/spyyn_api/issues"
+  },
+  "homepage": "https://github.com/Aaronik/spyyn_api"
+}
