@@ -23,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/Aaronik/spyyn_api/issues"
   },
-  "homepage": "https://github.com/Aaronik/spyyn_api"
+  "homepage": "https://github.com/Aaronik/spyyn_api",
+  "dependencies": {
+    "express": "^4.11.2",
+    "lodash": "^3.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
 }
