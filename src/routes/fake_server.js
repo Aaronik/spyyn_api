@@ -1,14 +1,18 @@
+var story = require('../fake_data/story'),
+		history = require('../fake_data/history');
+
 module.exports = {
   history: function (req, res, next) {
-  	var jid = req.params.jid;
+  	var journalId = req.params.journalId;
+  	var histories = history(journalId);
 
-    res.send('history for journal #' + jid);
+    res.send(histories);
   },
 
   stories: function (req, res, next) {
-  	var id = req.params.id;
+  	var storyId = req.params.storyId;
 
-    res.send('story ' + id);
+  	res.send(story(storyId));
   }
 }
 
