@@ -12,6 +12,7 @@ app.use(function (req, res, next) {
   log = {
     time: new Date,
     params: req.params,
+    body: req.body,
     url: req.url,
     reporter: 'Spyyn api'
   };
