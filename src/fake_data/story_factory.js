@@ -1,18 +1,21 @@
-// Use this to create a single story object
-// whose values differ slightly based on the
-// number you pass in.
+var _ = require('lodash'),
+    faker = require('faker'),
+    articleFactory = require('./article_factory');
 
-module.exports = function storyFactory (salt) {
+function manyArticles (count, storyId) {
+  var articles = [];
+
+  _.times(count, function (idx) {
+    articles.push(articleFactory.brief(idx, idx + 5, storyId));
+  }); 
+
+  return articles;
+};
+
+module.exports = function storyFactory (id) {
   return {
-    link: 'http://' + salt + '.com',
-    metrics: {
-      internalImportance: salt % 100,
-      sentiment: (salt + 70) % 100,
-      focus: (salt + 50) % 100,
-      controversy: (salt + 30) % 100,
-      idiosyncracyCredit: salt + 23 % 100
-    },
-    id: salt,
-    title: ['these', 'words', 'will', 'never', 'change']
-  }
+    id: id,
+    title: faker.lorem.words(id),
+    articles: manyArticles(id, id)
+  };
 };
