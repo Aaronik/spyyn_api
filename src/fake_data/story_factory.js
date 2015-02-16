@@ -2,17 +2,17 @@
 // whose values differ slightly based on the
 // number you pass in.
 
-module.exports = function storyFactory (distinguishingNum) {
+module.exports = function storyFactory (salt) {
   return {
-    link: 'http://' + distinguishingNum + '.com',
+    link: 'http://' + salt + '.com',
     metrics: {
-      internalImportance: distinguishingNum % 100,
-      sentiment: (distinguishingNum + 70) % 100,
-      focus: (distinguishingNum + 50) % 100,
-      controversy: (distinguishingNum + 30) % 100,
-      idiosyncracyCredit: distinguishingNum + 23 % 100
+      internalImportance: salt % 100,
+      sentiment: (salt + 70) % 100,
+      focus: (salt + 50) % 100,
+      controversy: (salt + 30) % 100,
+      idiosyncracyCredit: salt + 23 % 100
     },
-    id: distinguishingNum,
+    id: salt,
     title: ['these', 'words', 'will', 'never', 'change']
   }
 };
