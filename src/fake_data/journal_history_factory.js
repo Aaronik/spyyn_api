@@ -6,7 +6,9 @@ module.exports = function (journalId) {
   var histories = [];
 
   _.times(journalId, function (idx) {
-    histories.push(storyFactory(idx));
+    var story = storyFactory(idx);
+    story.journalId = journalId;
+    histories.push(story);
   })
 
   return histories;

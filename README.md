@@ -10,3 +10,6 @@ has many articles
 
 #### journal:
 has many articles
+
+#### journal history
+has many stories, each associated with the specific journal
