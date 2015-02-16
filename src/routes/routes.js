@@ -3,6 +3,11 @@
 var fakeServer = require('./fake_server');
 
 module.exports = function (app) {
+  app.get('/', function (req, res, next) {
+    res.send('visit /fake-server/{stories,articles,journals}\n');
+  });
+
+
   // all stories (paged by date?)
   // story objects, each containing a bunch of articles
   app.get('/fake-server/stories', fakeServer.stories);
