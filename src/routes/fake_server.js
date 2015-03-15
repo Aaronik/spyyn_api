@@ -17,7 +17,7 @@ function buildMany (factory, count) {
 module.exports = {
   // ### STORIES
   stories: function (req, res, next) {
-    var stories = buildMany(storyFactory, 1000);
+    var stories = buildMany(storyFactory, 10);
     res.json(stories);
   },
 
@@ -39,7 +39,7 @@ module.exports = {
 
   // ### JOURNALS
   journals: function (req, res, next) {
-    var journals = buildMany(journalFactory, 10);
+    var journals = buildMany(journalFactory, 1000);
     res.json(journals);
   },
 
